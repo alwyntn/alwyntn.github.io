@@ -14,21 +14,14 @@ function addList() {
 	input.value = "";
 }
 
-// function addToggle() {
-	
-// }
-
-for (var i = 0; listItem.length < 0; i++) {
-	listItem[i].addEventListener("click", function(){
-		this.classList.toggle("done");
-	})
+function toggleLi()
+{
+	this.classList.toggle("done");
 }
 
-
-// listItem.addEventListener("click", function(){
-// 	this.classList.toggle("done");
-// })
-
+for (var i = 0; listItem.length > 0; i++) {
+	listItem[i].addEventListener("click", toggleLi());
+}
 
 button.addEventListener("click", function(){
 	if (inputValue() > 0) {
