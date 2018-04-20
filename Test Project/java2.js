@@ -10,9 +10,20 @@ function inputValue() {
 
 function addList() {
 	var li = document.createElement("li");
-	li.appendChild(document.createTextNode(input.value));
+	li.appendChild(document.createTextNode(input.value + "  "));
 	ul.appendChild(li);
 	input.value = "";
+	
+	// Create delete button
+	var delButton = document.createElement("button");
+	var txtButton = document.createTextNode("delete");
+	delButton.appendChild(txtButton);
+	li.appendChild(delButton);
+	delButton.addEventListener("click", function(){
+	ul.removeChild(li);
+	})
+
+	// Strikethrough list item
 	listItem = document.querySelectorAll("li");
 	var listItemCount = listItem.length;
 	for (var i = 0; i < listItemCount; i++){
@@ -20,6 +31,7 @@ function addList() {
 		this.classList.toggle("done");
 		})
 	}
+
 }
 
 button.addEventListener("click", function(){

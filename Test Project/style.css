@@ -21,3 +21,10 @@
 .done {
   text-decoration: line-through;
 }
+
+
+body.startup {
+  background-image: url("https://www.j-26.com/assets/resized/shopping-cart.png");
+  background-size: cover;
+  height: 100%;
+}
